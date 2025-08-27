@@ -1,0 +1,24 @@
+# Applicazione dell'algoritmo Backtracking per la risoluzione dei cruciverba
+## Descrizione dei file sorgente
+### File sorgente di uso generico:
+- constants.py: contiene tutte le costanti necessarie per il programma;
+- crosswordGrid.py: contiene la classe CrosswordGrid che rappresenta la griglia del cruciverba utilizzata sia nel caso di variabili come lettere che nel caso di variabili come parole;
+- graphHelper.py: contiene la classe GraphHelper che ha il ruolo di memorizzare tempi di esecuzione e tassi di successo che vengono poi utilizzati nella costruzione dei grafici;
+- gridDataset.py: contiene la classe GridDataset ovvero il dataset di tutti i cruciverba utilizzati durante l'esecuzione, suddivisi in base alle loro dimensioni;
+- main.py: contiene il programma principale da lanciare per l'esecuzione che inizializza tutti gli oggetti necessari e, terminata l'esecuzione dell'algoritmo, procede a chiamare i metodi per la creazione e memorizzazione dei grafici;
+- test.py: contiene varie funzioni utilizzate durante l'esecuzione:
+    - _buildWordsListFromFile_: utilizzata per creare una lista di parole a partire da un file .txt;
+    - _solveCrossword_ e _solveLetterCrossword_: risolvono i cruciverba utilizzando come variabili, rispettivamete, parole e lettere;
+    - _printSolution_ e _printLetterSolution_: stampano le soluzioni rispettivamente dei CSP in cui le variabili sono parole e dei CSP in cui le variabili sono lettere;
+    - _createCSPGraphs_: crea i grafici riguardanti i tempi di esecuzione e i tassi di successo.
+### File sorgente per i CSP in cui le variabili sono le lettere:
+- letterBacktrack.py: contiene le funzioni per eseguire l'algoritmo Backtracking, _letterBacktrackingSearch_ e _letterBacktrack_, con le relative funzioni necessarie per l'utilizzo delle euristiche _orderDomainsValues_, _countConflicts_ e _selectUnassignedVariable_, e le funzioni necessarie per fare inferenza ovvero _doInference_, _ac3_, _revise_ e _isConsistent_;
+- letterCrosswordProblem.py: contiene la classe LetterCrosswordProblem che rappresenta un CSP con tutte le informazioni necessarie come la griglia, le parole da utilizzare per la risoluzione, le variabili, i domini, i vincoli e il numero di passi per arrivare alla soluzione;
+- letterCSPConstraint.py: contiene la classe LetterCSPConstraint che rappresenta un vincolo del CSP secondo il quale le variabili (intese come lettere) che formano una parola, devono, dopo ogni assegnamento, corrispondere, considerando sia le lettere assegnate sia gli spazi vuoti, ad almeno una delle parole della lista di parole utilizzate. Tale classe viene utilizzata per verificare se il vincolo è soddisfatto dall'assegnamento attuale e in caso contrario sarà necessario procedere con il backtracking;
+### File sorgente per i CSP in cui le variabili sono le parole:
+- wordBacktrack.py: contiene le funzioni per eseguire l'algoritmo Backtracking, _wordBacktrackingSearch_ e _wordBacktrack_, con le relative funzioni necessarie per l'utilizzo delle euristiche _orderDomainsValues_, _countConflicts_ e _selectUnassignedVariable_, e le funzioni necessarie per fare inferenza ovvero _doInference_, _ac3_, _revise_ e _isConsistent_;
+- wordCrosswordProblem.py: contiene la classe WordCrosswordProblem che rappresenta un CSP con tutte le informazioni necessarie come la griglia, le parole da utilizzare per la risoluzione, le variabili, i domini, i vincoli e il numero di passi per arrivare alla soluzione;
+- wordVariable.py: contiene la classe WordVariable che rappresenta le variabili del CSP indicandone direzione (orizzontale o verticale), le celle che la compongono e la lunghezza.
+## Istruzioni per l'utilizzo del programma
+Il programma funziona in automatico lanciando il _main_. In questo caso verrà eseguito il programma utilizzando il dataset di cruciverba e il numero e le dimensioni dei cruciverba che hanno portato ai dati ottenuti. Questo perchè in automatico andrà a leggere il file Dataset.txt e utilizzerà il suo contenuto per definire le griglie dei curciverba, a meno che non trovi il file vuoto e in quel caso procederà alla creazione del dataset memorizzandolo sullo stesso file. Per creare un nuovo dataset di griglie è dunque necessario eliminare il contenuto di Dataset.txt prima di lanciare l'esecuzione.
+È possibile modificare i valori contenuti nel file sorgente constants.py per variare le dimensioni dei cruciverba, il numero di griglie per ogni dimensione, la probabilità che una cella sia bloccata nella griglia e il numero di passi massimi per arrivare alla soluzione. Nel caso in cui la modifica riguardi direttamente le griglie (numero di griglie e loro dimensione e probabilità di cella bloccata), è necessario cancellare il contenuto di Datset.txt prima dell'esecuzione del main per far sì che il programma proceda alla creazione del nuovo dataset.

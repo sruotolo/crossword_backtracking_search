@@ -1,0 +1,566 @@
+Crossword dimensions: 5 x 6
+Number of words used: 50000
+##dan#
+un##io
+#onito
+fi###p
+#en##s
+Time: 0.2
+
+Crossword dimensions: 5 x 6
+Number of words used: 100000
+##mms#
+gr##es
+#oditi
+or###p
+#ih##a
+Time: 0.57
+
+Crossword dimensions: 5 x 6
+Number of words used: 150000
+##gas#
+ne##ea
+#gisti
+cl###r
+#il##e
+Time: 0.96
+
+Crossword dimensions: 5 x 6
+Number of words used: 50000
+No solution found with the words set given
+Time: 0.2
+
+Crossword dimensions: 5 x 6
+Number of words used: 100000
+No solution found with the words set given
+Time: 0.68
+
+Crossword dimensions: 5 x 6
+Number of words used: 150000
+No solution found with the words set given
+Time: 1.04
+
+Crossword dimensions: 5 x 6
+Number of words used: 50000
+No solution found with the words set given
+Time: 0.5
+
+Crossword dimensions: 5 x 6
+Number of words used: 100000
+##auni
+e##ven
+sbraii
+##e###
+mi##lt
+Time: 1.07
+
+Crossword dimensions: 5 x 6
+Number of words used: 150000
+##soli
+v##sel
+striai
+##a###
+oi##cl
+Time: 1.57
+
+Crossword dimensions: 5 x 6
+Number of words used: 50000
+###f##
+d#si##
+o#####
+m#c#lp
+erra#g
+Time: 0.06
+
+Crossword dimensions: 5 x 6
+Number of words used: 100000
+###b##
+d#vi##
+e#####
+l#o#mi
+iuri#h
+Time: 0.16
+
+Crossword dimensions: 5 x 6
+Number of words used: 150000
+###o##
+p#si##
+e#####
+r#g#up
+ieri#o
+Time: 0.17
+
+Crossword dimensions: 5 x 6
+Number of words used: 50000
+cr#c#a
+###e#v
+##iri#
+para##
+g#eia#
+Time: 0.17
+
+Crossword dimensions: 5 x 6
+Number of words used: 100000
+mi#u#l
+###d#t
+##ora#
+avra##
+l#oil#
+Time: 0.64
+
+Crossword dimensions: 5 x 6
+Number of words used: 150000
+No solution found with the words set given
+Time: 1.18
+
+Crossword dimensions: 5 x 6
+Number of words used: 50000
+####v#
+sir#e#
+or##rm
+mix#r#
+a###e#
+Time: 0.06
+
+Crossword dimensions: 5 x 6
+Number of words used: 100000
+####t#
+fen#o#
+ao##re
+reg#r#
+d###o#
+Time: 0.16
+
+Crossword dimensions: 5 x 6
+Number of words used: 150000
+####f#
+rei#u#
+ao##ra
+rak#b#
+a###i#
+Time: 0.26
+
+Crossword dimensions: 5 x 6
+Number of words used: 50000
+dan#cr
+#l####
+#a##k#
+pi#zia
+g###u#
+Time: 0.02
+
+Crossword dimensions: 5 x 6
+Number of words used: 100000
+epo#mi
+#e####
+#s##p#
+pi#mea
+v###t#
+Time: 0.04
+
+Crossword dimensions: 5 x 6
+Number of words used: 150000
+max#oi
+#b####
+#b##f#
+pi#cap
+o###q#
+Time: 0.08
+
+Crossword dimensions: 6 x 7
+Number of words used: 50000
+##i##lp
+poro#o#
+#vi#ire
+ge#godi
+######a
+cr#chi#
+Time: 0.12
+
+Crossword dimensions: 6 x 7
+Number of words used: 100000
+##u##to
+zare#e#
+#ri#sdo
+mi#mail
+######i
+lt#son#
+Time: 0.33
+
+Crossword dimensions: 6 x 7
+Number of words used: 150000
+##o##go
+vera#i#
+#oi#ira
+si#volt
+######p
+cl#ime#
+Time: 0.63
+
+Crossword dimensions: 6 x 7
+Number of words used: 50000
+dome#cr
+#r#####
+#av####
+###zono
+lp##io#
+#g##le#
+Time: 0.05
+
+Crossword dimensions: 6 x 7
+Number of words used: 100000
+savo#lt
+#r#####
+#ih####
+###zare
+mi##ne#
+#m##io#
+Time: 0.12
+
+Crossword dimensions: 6 x 7
+Number of words used: 150000
+male#oi
+#l#####
+#il####
+###orro
+up##ea#
+#o##is#
+Time: 0.21
+
+Crossword dimensions: 6 x 7
+Number of words used: 50000
+santo#c
+eia###h
+#eolici
+g#s####
+pg###f#
+s###si#
+Time: 0.28
+
+Crossword dimensions: 6 x 7
+Number of words used: 100000
+sabre#c
+sia###u
+#arasti
+p#n####
+es###m#
+t###bi#
+Time: 1.07
+
+Crossword dimensions: 6 x 7
+Number of words used: 150000
+sartu#o
+ira###b
+#ariani
+m#a####
+ah###o#
+x###ci#
+Time: 1.51
+
+Crossword dimensions: 6 x 7
+Number of words used: 50000
+z#sa#fi
+e##pg#l
+rm###il
+i#imita
+##r#nit
+##eme#i
+Time: 0.47
+
+Crossword dimensions: 6 x 7
+Number of words used: 100000
+No solution found with the words set given
+Time: 1.99
+
+Crossword dimensions: 6 x 7
+Number of words used: 150000
+v#oi#vs
+e##si#t
+ra###tr
+a#spiri
+##t#ten
+##eoi#i
+Time: 2.87
+
+Crossword dimensions: 6 x 7
+Number of words used: 50000
+afrore#
+##h####
+##o###c
+###no#r
+a##eia#
+v###lp#
+Time: 0.13
+
+Crossword dimensions: 6 x 7
+Number of words used: 100000
+No solution found with the words set given
+Time: 0.31
+
+Crossword dimensions: 6 x 7
+Number of words used: 150000
+No solution found with the words set given
+Time: 0.5
+
+Crossword dimensions: 6 x 7
+Number of words used: 50000
+poro###
+#ra#pil
+##d#voi
+b######
+i###ssh
+pg#aie#
+Time: 0.11
+
+Crossword dimensions: 6 x 7
+Number of words used: 100000
+zare###
+#io#mio
+##m#ini
+c######
+u###ssh
+ih#neo#
+Time: 0.18
+
+Crossword dimensions: 6 x 7
+Number of words used: 150000
+zara###
+#pa#lea
+##k#tai
+o######
+b###tsh
+il#bei#
+Time: 0.23
+
+Crossword dimensions: 6 x 7
+Number of words used: 50000
+No solution found with the words set given
+Time: 0.6
+
+Crossword dimensions: 6 x 7
+Number of words used: 100000
+liverai
+###p##h
+m##omo#
+i#b#ai#
+##ebe##
+erri#lt
+Time: 0.95
+
+Crossword dimensions: 6 x 7
+Number of words used: 150000
+barelli
+###r##l
+o##eoe#
+i#b#si#
+##rai##
+peri#cl
+Time: 1.85
+
+Crossword dimensions: 7 x 8
+Number of words used: 50000
+e#a###l#
+b#cr##pc
+eme#av#l
+######sa
+sp#vr##v
+si#####e
+h###chi#
+Time: 0.11
+
+Crossword dimensions: 7 x 8
+Number of words used: 100000
+c#n###m#
+u#es##is
+ibi#lt#i
+######la
+sa#vs##t
+oi#####e
+n###est#
+Time: 0.16
+
+Crossword dimensions: 7 x 8
+Number of words used: 150000
+o#t###u#
+b#ah##ps
+ili#oi#t
+######la
+is#cl##n
+vi#####i
+o###ime#
+Time: 0.25
+
+Crossword dimensions: 7 x 8
+Number of words used: 50000
+No solution found with the words set given
+Time: 0.33
+
+Crossword dimensions: 7 x 8
+Number of words used: 100000
+m##e###b
+is#sipai
+#pt###v#
+#ao###o#
+egra#a#s
+#o#con#o
+###eri#n
+Time: 0.65
+
+Crossword dimensions: 7 x 8
+Number of words used: 150000
+u##v###o
+ps#sinti
+#ci###i#
+#at###c#
+grip#d#i
+#i#rei#m
+###rai#e
+Time: 1.66
+
+Crossword dimensions: 7 x 8
+Number of words used: 50000
+##cr###s
+c###fi#u
+l#ss#nit
+a#io##le
+parra###
+###s#av#
+#chi####
+Time: 0.25
+
+Crossword dimensions: 7 x 8
+Number of words used: 100000
+##mi###p
+d###ho#e
+e#cs#ius
+l#ra##ai
+ivano###
+###c#lt#
+#cui####
+Time: 1.13
+
+Crossword dimensions: 7 x 8
+Number of words used: 150000
+##oi###d
+p###la#o
+e#pc#iud
+r#ea##ei
+idrie###
+###n#cl#
+#obi####
+Time: 1.85
+
+Crossword dimensions: 7 x 8
+Number of words used: 50000
+l##ap#cr
+pg##c###
+##sp##u#
+#r#t##v#
+#or#gres
+#tal#eia
+sode####
+Time: 0.18
+
+Crossword dimensions: 7 x 8
+Number of words used: 100000
+b##mi#lt
+im##h###
+##vi##e#
+#b#n##r#
+#at#iuri
+#reo#aio
+cori####
+Time: 0.36
+
+Crossword dimensions: 7 x 8
+Number of words used: 150000
+u##sp#oi
+po##t###
+##ap##o#
+#z#r##b#
+#ao#soli
+#ria#cio
+tali####
+Time: 0.55
+
+Crossword dimensions: 7 x 8
+Number of words used: 50000
+#aeree#z
+ics#n#si
+meco##ca
+##o###i#
+#irle#pc
+lutai#pi
+#d##a#a#
+Time: 1.41
+
+Crossword dimensions: 7 x 8
+Number of words used: 100000
+No solution found with the words set given
+Time: 4.58
+
+Crossword dimensions: 7 x 8
+Number of words used: 150000
+#sdata#b
+sti#e#se
+aedo##ai
+##u###l#
+#acre#ap
+brano#mi
+#e##i#i#
+Time: 8.82
+
+Crossword dimensions: 7 x 8
+Number of words used: 50000
+No solution found with the words set given
+Time: 10.97
+
+Crossword dimensions: 7 x 8
+Number of words used: 100000
+l####sud
+al#vs#ai
+t##oi##c
+tapinate
+io##o##r
+#n#ud#lt
+mi##ih#i
+Time: 25.03
+
+Crossword dimensions: 7 x 8
+Number of words used: 150000
+f####gas
+in#vr#pa
+e##ai##p
+risicato
+io##r##r
+#d#ci#si
+oi##il#i
+Time: 54.01
+
+Crossword dimensions: 7 x 8
+Number of words used: 50000
+f#g#sa#c
+aie#io#r
+tr###h##
+eia####f
+r##k#voi
+amnioti#
+###u##lp
+Time: 2.14
+
+Crossword dimensions: 7 x 8
+Number of words used: 100000
+m#b#pr#l
+ibi#io#t
+ti###m##
+eoa####m
+m##p#ari
+addento#
+###t##ih
+Time: 9.44
+
+Crossword dimensions: 7 x 8
+Number of words used: 150000
+No solution found with the words set given
+Time: 15.98
+
