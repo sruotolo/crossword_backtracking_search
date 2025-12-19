@@ -1,4 +1,7 @@
 # Applicazione dell'algoritmo Backtracking per la risoluzione dei cruciverba
+Progetto sviluppato per il corso di "Intelligenza Artificiale" ad "Università degli Studi di Firenze". 
+Importato da https://codeberg.org/samuele_ruotolo/Samuele-Ruotolo in quanto era richiesta la consegna su Codeberg.
+In _Relazione.pdf_ è presente una descrizione dettagliata del progetto e una discussione dei risultati ottenuti.
 ## Descrizione dei file sorgente
 ### File sorgente di uso generico:
 - constants.py: contiene tutte le costanti necessarie per il programma;
