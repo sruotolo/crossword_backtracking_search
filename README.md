@@ -1,27 +1,65 @@
-# Applicazione dell'algoritmo Backtracking per la risoluzione dei cruciverba
-Progetto sviluppato per il corso di "Intelligenza Artificiale" ad "Università degli Studi di Firenze".  
-Importato da https://codeberg.org/samuele_ruotolo/Samuele-Ruotolo in quanto era richiesta la consegna su Codeberg.  
-In _Relazione.pdf_ è presente una descrizione dettagliata del progetto e una discussione dei risultati ottenuti.
-## Descrizione dei file sorgente
-### File sorgente di uso generico:
-- constants.py: contiene tutte le costanti necessarie per il programma;
-- crosswordGrid.py: contiene la classe CrosswordGrid che rappresenta la griglia del cruciverba utilizzata sia nel caso di variabili come lettere che nel caso di variabili come parole;
-- graphHelper.py: contiene la classe GraphHelper che ha il ruolo di memorizzare tempi di esecuzione e tassi di successo che vengono poi utilizzati nella costruzione dei grafici;
-- gridDataset.py: contiene la classe GridDataset ovvero il dataset di tutti i cruciverba utilizzati durante l'esecuzione, suddivisi in base alle loro dimensioni;
-- main.py: contiene il programma principale da lanciare per l'esecuzione che inizializza tutti gli oggetti necessari e, terminata l'esecuzione dell'algoritmo, procede a chiamare i metodi per la creazione e memorizzazione dei grafici;
-- test.py: contiene varie funzioni utilizzate durante l'esecuzione:
-    - _buildWordsListFromFile_: utilizzata per creare una lista di parole a partire da un file .txt;
-    - _solveCrossword_ e _solveLetterCrossword_: risolvono i cruciverba utilizzando come variabili, rispettivamete, parole e lettere;
-    - _printSolution_ e _printLetterSolution_: stampano le soluzioni rispettivamente dei CSP in cui le variabili sono parole e dei CSP in cui le variabili sono lettere;
-    - _createCSPGraphs_: crea i grafici riguardanti i tempi di esecuzione e i tassi di successo.
-### File sorgente per i CSP in cui le variabili sono le lettere:
-- letterBacktrack.py: contiene le funzioni per eseguire l'algoritmo Backtracking, _letterBacktrackingSearch_ e _letterBacktrack_, con le relative funzioni necessarie per l'utilizzo delle euristiche _orderDomainsValues_, _countConflicts_ e _selectUnassignedVariable_, e le funzioni necessarie per fare inferenza ovvero _doInference_, _ac3_, _revise_ e _isConsistent_;
-- letterCrosswordProblem.py: contiene la classe LetterCrosswordProblem che rappresenta un CSP con tutte le informazioni necessarie come la griglia, le parole da utilizzare per la risoluzione, le variabili, i domini, i vincoli e il numero di passi per arrivare alla soluzione;
-- letterCSPConstraint.py: contiene la classe LetterCSPConstraint che rappresenta un vincolo del CSP secondo il quale le variabili (intese come lettere) che formano una parola, devono, dopo ogni assegnamento, corrispondere, considerando sia le lettere assegnate sia gli spazi vuoti, ad almeno una delle parole della lista di parole utilizzate. Tale classe viene utilizzata per verificare se il vincolo è soddisfatto dall'assegnamento attuale e in caso contrario sarà necessario procedere con il backtracking.
-### File sorgente per i CSP in cui le variabili sono le parole:
-- wordBacktrack.py: contiene le funzioni per eseguire l'algoritmo Backtracking, _wordBacktrackingSearch_ e _wordBacktrack_, con le relative funzioni necessarie per l'utilizzo delle euristiche _orderDomainsValues_, _countConflicts_ e _selectUnassignedVariable_, e le funzioni necessarie per fare inferenza ovvero _doInference_, _ac3_, _revise_ e _isConsistent_;
-- wordCrosswordProblem.py: contiene la classe WordCrosswordProblem che rappresenta un CSP con tutte le informazioni necessarie come la griglia, le parole da utilizzare per la risoluzione, le variabili, i domini, i vincoli e il numero di passi per arrivare alla soluzione;
-- wordVariable.py: contiene la classe WordVariable che rappresenta le variabili del CSP indicandone direzione (orizzontale o verticale), le celle che la compongono e la lunghezza.
-## Istruzioni per l'utilizzo del programma
-Il programma funziona in automatico lanciando il _main_. In questo caso verrà eseguito il programma utilizzando il dataset di cruciverba e il numero e le dimensioni dei cruciverba che hanno portato ai dati ottenuti. Questo perchè in automatico andrà a leggere il file Dataset.txt e utilizzerà il suo contenuto per definire le griglie dei curciverba, a meno che non trovi il file vuoto e in quel caso procederà alla creazione del dataset memorizzandolo sullo stesso file. Per creare un nuovo dataset di griglie è dunque necessario eliminare il contenuto di Dataset.txt prima di lanciare l'esecuzione.  
-È possibile modificare i valori contenuti nel file sorgente constants.py per variare le dimensioni dei cruciverba, il numero di griglie per ogni dimensione, la probabilità che una cella sia bloccata nella griglia e il numero di passi massimi per arrivare alla soluzione. Nel caso in cui la modifica riguardi direttamente le griglie (numero di griglie e loro dimensione e probabilità di cella bloccata), è necessario cancellare il contenuto di Datset.txt prima dell'esecuzione del main per far sì che il programma proceda alla creazione del nuovo dataset.
+# Crossword CSP Solver: Word vs. Letter Backtracking
+
+## Overview
+This project is an Artificial Intelligence solver for crossword puzzles. It models crossword generation and solving as a **Constraint Satisfaction Problem (CSP)** and solves it using **Backtracking Search** combined with inference algorithms.
+
+This repository contains the final project for the **Artificial Intelligence** (*Intelligenza Artificiale*) exam at the **University of Florence** (*Università degli Studi di Firenze*). The implementation is inspired by the constraint satisfaction exercises from the textbook *Artificial Intelligence: A Modern Approach (AIMA)*.
+> **Note:** Imported from [https://codeberg.org/samuele_ruotolo/Samuele-Ruotolo](https://codeberg.org/samuele_ruotolo/Samuele-Ruotolo) as the original project submission was required on Codeberg.
+
+The core feature of this repository is the **comparative analysis** of two distinct CSP formulations:
+1. **Word-Based CSP:** Variables are the sequences of blank cells (horizontal or vertical), and the domain consists of full words from a dictionary.
+2. **Letter-Based CSP:** Variables are the individual blank cells in the grid, and the domain consists of the letters of the alphabet (a-z).
+
+The program runs both models across datasets of randomly generated grids (dimensions: 5x6, 6x7, 7x8) and dictionaries of varying sizes (50k, 100k, 150k words) to compare their efficiency, execution times, and computational steps.
+
+## AI Concepts & Algorithms
+Both CSP models implement the following algorithms to optimize the search space:
+* **Arc Consistency (AC-3):** Used as a preprocessing step and for inference during the backtracking search to reduce domain sizes early.
+* **Backtracking Search:** A depth-first search that tests assignments and backtracks upon constraint violations. To handle computationally expensive grids, a cutoff limit of `20,000` steps is enforced.
+* **Heuristics:**
+  * **Minimum Remaining Values (MRV):** Selects the next unassigned variable that has the fewest valid options remaining in its domain.
+  * **Least Constraining Value (LCV):** Orders the domain values by prioritizing the ones that rule out the fewest options for neighboring variables.
+
+## Project Structure
+The repository is organized into the main Python scripts at the root level and a `Files/` directory for datasets and outputs.
+
+```text
+.
+├── Files/
+│   ├── 50000_words.txt, 100000_words.txt, 150000_words.txt  # Dictionaries
+│   ├── Dataset.txt                                          # Saved crossword grid datasets
+│   ├── Word Solutions.txt, Letter Solutions.txt             # Output solution logs
+│   └── Results.png                                          # Matplotlib comparison graphs
+├── Relazione.pdf               # Detailed project report (in Italian)
+├── main.py                     # Entry point of the application
+├── test.py                     # Test runner and matplotlib graphing logic
+├── constants.py                # Configuration (dimensions, paths, probabilities)
+├── crosswordGrid.py            # Grid generation logic
+├── wordBacktrack.py / letterBacktrack.py                    # Backtracking & AC-3 logic
+└── wordCrosswordProblem.py / letterCrosswordProblem.py      # CSP problem definitions
+```
+*(Note: additional helper classes like `wordVariable.py`, `letterCSPConstraint.py`, etc., are also included in the root).*
+
+## Documentation
+For a deeper theoretical explanation, methodology, and detailed performance comparisons across different grid dimensions and dictionary sizes, please consult the official report (written in Italian): **[`Relazione.pdf`](Relazione.pdf)**.
+
+## Prerequisites
+To run this project, you need **Python 3.12+** installed, along with the `matplotlib` library for generating the results graph.
+
+```bash
+pip install matplotlib
+```
+
+## How to Run
+To execute the tests and generate the performance comparison:
+
+```bash
+# 1. Clone the repository
+git clone [https://github.com/sruotolo/crossword_backtracking_search.git](https://github.com/sruotolo/crossword_backtracking_search.git)
+cd crossword_backtracking_search
+
+# 2. Run the main script
+python main.py
+```
+
+Upon execution, the program will load or generate the crossword grids, solve them, output the textual results into `Files/`, and generate a comparative chart saved as `Results.png`.
